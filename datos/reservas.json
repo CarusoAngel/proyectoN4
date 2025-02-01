@@ -1,0 +1,10 @@
+[
+  {
+    "id": "b2717620-8ead-4d2c-96e4-8a943ecb6b0a",
+    "hotel": "Hotel Paraíso",
+    "fecha": "2025-02-02",
+    "tipo_habitacion": "Doble",
+    "num_huespedes": 2,
+    "estado": "Confirmado"
+  }
+]

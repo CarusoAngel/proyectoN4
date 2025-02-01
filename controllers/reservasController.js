@@ -6,7 +6,10 @@ const { v4:uuidv4} = require('uuid');
 
 // ubicacion archivo json
 
-const dataPath = path.join(__dirname, '../data/reservas.json');
+const dataPath = path.join(__dirname, '../datos/reservas.json');
+
+// Depuración de la ruta
+console.log('Ruta completa del archivo JSON:', dataPath);
 
 // lectura archivo json
 
@@ -22,8 +25,20 @@ const leerReservas = () => {
 // datos del archivo JSON
 
 const escribirReservas = (reservas) => { 
-    fs.writeFileSync(dataPath, JSON.stringify(reservas, null, 2));
-};
+    try {
+        fs.writeFileSync(dataPath, JSON.stringify(reservas, null, 2));
+        console.log('Reservas guardadas correctamente.');
+    } catch (error) {
+        if (error.code === 'ENOENT') {
+            console.error('El archivo o carpeta no existe. Creándolos...');
+            fs.mkdirSync(path.dirname(dataPath), {recursive: true});
+            fs.writeFileSync(dataPath, JSON.stringify(reservas, null, 2));
+        } else {
+            console.error('Error al escribir reservas:', error.message);
+            throw error;
+        }
+    }
+    };
 
 // nueva reserva
 
