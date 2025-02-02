@@ -98,7 +98,7 @@ exports.actualizarReserva = (req, res) => {
 exports.eliminarReserva = (req, res) => {
     const reservas = leerReservas();
     const index = reservas.findIndex(r=> r.id === req.params.id);
-    if (index === -1) return res.status(404).send('Reserva no econtrada');
+    if (index === -1) return res.status(404).send('Reserva no encontrada');
     const [eliminada] = reservas.splice(index,1);
     escribirReservas(reservas);
     res.status(200).json({ mensaje: 'Reserva eliminada', eliminada});

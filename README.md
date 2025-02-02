@@ -1,11 +1,11 @@
-# AOI de Reservas de Hotel
+# API de Reservas de Hotel
 
-Esta API desarrollada con node.js y express, sirve para gestionar reservas de hotel.
+Esta API desarrollada con Node.js y Express, permite gestionar reservas de hotel mediante operaciones CRUD y filtros.
 
 ## Funciones
 
 - Crear una reserva.
-- Obtener las reserva a tráves de filtros.
+- Obtener las reservas a tráves de filtros (por hotel,  rango de fechas, tipo de habitación, estado y número de huespedes)
 - Obtener una reserva por ID.
 - Actualizar una reserva.
 - Eliminar una reserva.
@@ -18,9 +18,9 @@ Esta API desarrollada con node.js y express, sirve para gestionar reservas de ho
 - `PUT /api/reservas/:id` - Actualizar una reserva.
 - `DELETE /api/reservas/:id` - Eliminar una reserva.
 
-## Configuración
+## Instalación
 
-- Clona el repositorio.
-- Instala las dependencias:
+- Clona el repositorio:
 ```bash
-npm install
+- git clone [Repositorio](https://github.com/CarusoAngel/proyectoN4)
+cd proyectoN4
