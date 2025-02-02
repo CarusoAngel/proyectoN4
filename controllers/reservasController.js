@@ -9,9 +9,10 @@ const { v4:uuidv4} = require('uuid');
 const dataPath = path.join(__dirname, '../datos/reservas.json');
 
 // Depuración de la ruta
+
 console.log('Ruta completa del archivo JSON:', dataPath);
 
-// lectura archivo json
+// funci´´on para leer las reservas desde el archivo JSON
 
 const leerReservas = () => {
     try { 
@@ -60,15 +61,15 @@ exports.obtenerReservas = (req, res) => {
     const { hotel, fecha_inicio, fecha_fin, tipo_habitacion, estado, num_huespedes } = req.query;
     let resultado = reservas;
 
-    if (hotel) resultado = resultado.filter(r => r.hotel === hotel);
+    if (hotel) resultado = resultado.filter(reserva => reserva.hotel === hotel);
     if (fecha_inicio && fecha_fin) {
         resultado = resultado.filter(
-            r => new Date(r.fecha) >= new Date(fecha_inicio) && new Date(r.fecha) <= new Date(fecha_fin)
+            reserva => new Date(reserva.fecha) >= new Date(fecha_inicio) && new Date(r.fecha) <= new Date(fecha_fin)
         );
     }
-    if (tipo_habitacion) resultado = resultado.filter(r => r.tipo_habitacion === tipo_habitacion);
-    if (estado) resultado = resultado.filter(r => r.estado === estado);
-    if (num_huespedes) resultado = resultado.filter(r => r.num_huespedes == num_huespedes);
+    if (tipo_habitacion) resultado = resultado.filter(rerserva => rerserva.tipo_habitacion === tipo_habitacion);
+    if (estado) resultado = resultado.filter(reserva => reserva.estado === estado);
+    if (num_huespedes) resultado = resultado.filter(reserva => reserva.num_huespedes == num_huespedes);
 
     res.json(resultado);
 };
