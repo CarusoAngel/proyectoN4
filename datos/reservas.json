@@ -1,10 +1,50 @@
 [
   {
-    "id": "b2717620-8ead-4d2c-96e4-8a943ecb6b0a",
-    "hotel": "Hotel Paraíso",
-    "fecha": "2025-02-02",
+    "id": "aa0c4974-25d2-472b-a565-3ceb99adad79",
+    "hotel": "Hotel Caruso",
+    "fecha": "2025-01-15",
+    "tipo_habitacion": "Suite Familiar",
+    "num_huespedes": 4,
+    "estado": "Confirmado"
+  },
+  {
+    "id": "ac27acf3-66f2-4c81-960a-afd2625644d4",
+    "hotel": "Hotel Caruso",
+    "fecha": "2025-02-20",
+    "tipo_habitacion": "Suite",
+    "num_huespedes": 9,
+    "estado": "Pendiente"
+  },
+  {
+    "id": "5e84197c-d125-4ed7-8928-cc7a29992097",
+    "hotel": "Hotel Caruso",
+    "fecha": "2025-03-05",
+    "tipo_habitacion": "Individual",
+    "num_huespedes": 1,
+    "estado": "Confirmado"
+  },
+  {
+    "id": "7f90a6d4-8f12-4c5e-8094-3462ffd378e3",
+    "hotel": "Hotel Caruso",
+    "fecha": "2025-04-10",
+    "tipo_habitacion": "Suite de Lujo",
+    "num_huespedes": 3,
+    "estado": "Cancelado"
+  },
+  {
+    "id": "d220a667-6ec3-4dca-be1c-4082b42ee43c",
+    "hotel": "Hotel Caruso",
+    "fecha": "2025-05-18",
     "tipo_habitacion": "Doble",
     "num_huespedes": 2,
     "estado": "Confirmado"
+  },
+  {
+    "id": "fa34e66b-3e7f-4313-8b8e-feb7916837ed",
+    "hotel": "Hotel Caruso",
+    "fecha": "2025-06-25",
+    "tipo_habitacion": "Suite Familiar",
+    "num_huespedes": 5,
+    "estado": "Pendiente de pago"
   }
 ]

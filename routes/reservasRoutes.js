@@ -25,5 +25,3 @@ router.delete('/:id', reservasController.eliminarReserva);
 // Exporta el enrutador
 
 module.exports = router;
-
-
