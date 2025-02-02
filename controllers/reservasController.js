@@ -69,23 +69,38 @@ exports.obtenerReservas = (req, res) => {
   let resultado = reservas;
 
   if (hotel) resultado = resultado.filter((reserva) => reserva.hotel === hotel);
+
   if (fecha_inicio && fecha_fin) {
     resultado = resultado.filter(
       (reserva) =>
         new Date(reserva.fecha) >= new Date(fecha_inicio) &&
-        new Date(r.fecha) <= new Date(fecha_fin)
+        new Date(reserva.fecha) <= new Date(fecha_fin)
     );
   }
-  if (tipo_habitacion)
+
+  if (tipo_habitacion){
     resultado = resultado.filter(
-      (rerserva) => rerserva.tipo_habitacion === tipo_habitacion
+      (reserva) => reserva.tipo_habitacion === tipo_habitacion
     );
-  if (estado)
+  }
+
+  if (estado){
     resultado = resultado.filter((reserva) => reserva.estado === estado);
-  if (num_huespedes)
+  }
+
+  if (num_huespedes){
     resultado = resultado.filter(
       (reserva) => reserva.num_huespedes == num_huespedes
     );
+  }
+
+// De no haber resultadoen la busqueda, imprimir mensaje
+
+if(resultado.length === 0) {
+  return res.status(200).json({
+    mensaje:'No se encontraron reservas que coincidan con los criterios de busqueda.',
+  });
+}
 
   res.json(resultado);
 };
